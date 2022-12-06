@@ -55,23 +55,26 @@
 
 // export default App;
 
+import React from 'react';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
+import PageSignin from './pages/signin';
 import './App.css';
+
+
+
+
 function App() {
-  
-
-  let number = 0;
-
-  const klik = () => {
-    number  +=1;
-
-  };
-
-  
   return (
-    <>
-    <h1></h1>  
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+   
+        <Route path='signin' element={<PageSignin />} />
+       
+      </Routes>
+    </BrowserRouter>
+  );
+
+  
 }
 
 export default App;
